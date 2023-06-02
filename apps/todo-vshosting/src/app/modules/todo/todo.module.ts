@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { TodoRouting } from "../todo-routes";
+import { TodoRouting } from "./todo-routes";
 import { TodoComponent } from "./todo.component";
 import { MatInputModule } from "@angular/material/input";
 import {MatButtonModule} from '@angular/material/button';
