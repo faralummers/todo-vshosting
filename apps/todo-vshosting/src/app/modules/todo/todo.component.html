@@ -1,0 +1,10 @@
+<app-todo-creation></app-todo-creation>
+<div class="todo">
+  <div class="todo-row">
+    <app-todo-filters></app-todo-filters>
+    <ng-container *ngFor="let item of todoList$ | async">
+      {{item.completed}}
+      <app-todo-list></app-todo-list>
+    </ng-container>
+  </div>
+</div>

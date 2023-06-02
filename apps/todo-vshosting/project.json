@@ -23,7 +23,7 @@
           "apps/todo-vshosting/src/favicon.ico",
           "apps/todo-vshosting/src/assets"
         ],
-        "styles": ["apps/todo-vshosting/src/styles.scss"],
+        "styles": ["apps/todo-vshosting/src/styles.scss", "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"],
         "scripts": []
       },
       "configurations": {
