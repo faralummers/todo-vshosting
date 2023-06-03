@@ -9,11 +9,14 @@ import { TodoFiltersComponent } from './components/todo-filters/todo-filters.com
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { BrowserModule } from "@angular/platform-browser";
+import { ReactiveFormsModule } from "@angular/forms";
+import { TodoCounterComponent } from './components/todo-counter/todo-counter.component';
+import { MatBadgeModule } from "@angular/material/badge";
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
-  declarations: [TodoComponent, TodoCreationComponent, TodoFiltersComponent, TodoListComponent],
-  imports: [CommonModule, BrowserModule, TodoRouting, MatInputModule, MatButtonModule, MatCardModule, MatCheckboxModule],
+  declarations: [TodoComponent, TodoCreationComponent, TodoFiltersComponent, TodoListComponent, TodoCounterComponent],
+    imports: [CommonModule, MatIconModule, ReactiveFormsModule, TodoRouting, MatInputModule, MatButtonModule, MatCardModule, MatCheckboxModule, MatBadgeModule],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

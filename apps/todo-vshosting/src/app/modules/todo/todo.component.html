@@ -1,10 +1,12 @@
-<app-todo-creation></app-todo-creation>
-<div class="todo">
-  <div class="todo-row">
-    <app-todo-filters></app-todo-filters>
-    <ng-container *ngFor="let item of todoList$ | async">
-      {{item.completed}}
-      <app-todo-list></app-todo-list>
-    </ng-container>
-  </div>
+<app-todo-creation (createTodoItem)="createTodoItem($event)"></app-todo-creation>
+<app-todo-counter [newTasks]="newTasks$ | async" [completedTasks]="completedTasks$ | async"></app-todo-counter>
+<div class="container-todo">
+    <app-todo-filters (filterTasks)="filterTasks($event)"></app-todo-filters>
+    <div class="subcontainer-cards">
+      <ng-container *ngFor="let todoItem of todoList$ | async">
+        <app-todo-list
+          [todoItem]="todoItem"
+        ></app-todo-list>
+      </ng-container>
+    </div>
 </div>

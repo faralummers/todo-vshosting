@@ -1,8 +1,5 @@
-<div>
-  <mat-form-field class="example-full-width">
+<mat-form-field class="example-full-width">
     <mat-label>Favorite food</mat-label>
-    <input matInput placeholder="Ex. Pizza" value="Sushi">
+    <input matInput [formControl]="todoCreationText">
   </mat-form-field>
-  <button mat-button>Basic</button>
-  <button mat-stroked-button color="warn">Accent</button>
-</div>
+<button mat-stroked-button (click)="createTodo()" color="warn">Přidat todo</button>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { FormControl } from "@angular/forms";
 
 @Component({
   selector: 'app-todo-creation',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./todo-creation.component.scss']
 })
 export class TodoCreationComponent {
-
+  todoCreationText = new FormControl('');
+  @Output() createTodoItem = new EventEmitter<any>();
+  constructor() {}
+  createTodo(): void {
+    this.createTodoItem.emit(this.todoCreationText.value);
+    this.todoCreationText.reset();
+  }
 }

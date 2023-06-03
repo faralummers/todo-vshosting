@@ -8,6 +8,8 @@ import * as selectors from './todo.selector';
   providedIn: 'root'
 })
 export class TodoFacade {
-  todoList$: Observable<TodoListInterface[]> = this.store.select(selectors.todoListSelector);
+  todoList$: Observable<TodoListInterface[]> = this.store.select(selectors.todoListWithFiltersSelector);
+  completedTasksCounter$: Observable<number> = this.store.select(selectors.todoCompletedTaskSelector);
+  newTasksCounter$: Observable<number> = this.store.select(selectors.todoNewTaskSelector);
   constructor(private store: Store) {}
 }

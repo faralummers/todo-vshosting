@@ -5,9 +5,13 @@ import { TodoListInterface } from "../modules/todo/interfaces/todo-list.interfac
 export const todoFeatureKey = 'todo';
 export interface TodoState {
   todoList: TodoListInterface[];
+  completedTasks: boolean;
+  newTasks: boolean;
 }
 export const initialState: TodoState  = {
-  todoList: []
+  todoList: [],
+  completedTasks: false,
+  newTasks: false
 }
 export const TodoReducer = createReducer(
   initialState,
@@ -15,5 +19,10 @@ export const TodoReducer = createReducer(
   on(actions.fetchAllTodosSuccess, (state, { todoList }) => ({
     ...state,
     todoList
+  })),
+  on(actions.filterTasks, (state, {completedTasks, newTasks}) => ({
+    ...state,
+    completedTasks,
+    newTasks
   }))
 )

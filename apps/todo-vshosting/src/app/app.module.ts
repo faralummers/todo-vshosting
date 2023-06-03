@@ -15,7 +15,7 @@ import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, StoreModule.forRoot({
+  imports: [AppRoutingModule, BrowserAnimationsModule, StoreModule.forRoot({
     router: routerReducer,
     todo: TodoReducer
   }),

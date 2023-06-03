@@ -1,9 +1,9 @@
-.todo {
+.subcontainer-cards {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-
-  &-row {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
 }
+.container-todo {
+  display: flex;
+}
+

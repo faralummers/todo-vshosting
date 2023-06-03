@@ -1,1 +1,5 @@
-<mat-checkbox> fillter</mat-checkbox>
+<div [formGroup]="filterTasksForm">
+  <mat-checkbox formControlName="completedTasks">Vyresene ulohy</mat-checkbox>
+  <mat-checkbox formControlName="newTasks">Nevyresene ulohy</mat-checkbox>
+</div>
+
