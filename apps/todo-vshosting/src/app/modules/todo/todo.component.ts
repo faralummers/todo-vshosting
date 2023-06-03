@@ -25,6 +25,10 @@ export class TodoComponent implements OnInit {
   createTodoItem(todoItem: string): void {
     this.store.dispatch(actions.createTodoItem({ text: todoItem, completed: false }));
   }
+
+  markAllAsCompleted(): void {
+    this.store.dispatch(actions.markAllTodosAsCompleted());
+  }
   filterTasks(taskFilter: { completedTasks: boolean, newTasks: boolean }): void {
     this.store.dispatch(actions.filterTasks(taskFilter));
   }

@@ -1,4 +1,4 @@
-<app-todo-creation (createTodoItem)="createTodoItem($event)"></app-todo-creation>
+<app-todo-creation (markAllAsCompleted)="markAllAsCompleted()" (createTodoItem)="createTodoItem($event)"></app-todo-creation>
 <app-todo-counter [newTasks]="newTasks$ | async" [completedTasks]="completedTasks$ | async"></app-todo-counter>
 <div class="container-todo">
     <app-todo-filters (filterTasks)="filterTasks($event)"></app-todo-filters>

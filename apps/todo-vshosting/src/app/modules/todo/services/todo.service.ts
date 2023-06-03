@@ -18,4 +18,10 @@ export class TodoService {
     return this.http.post(`${this.api}/todos`, {...todoItem});
   }
 
+  markAllAsCompleted(): Observable<any> {
+    return this.http.patch(`${this.api}/todos/mark-all-as-completed`, {}, { params: {
+        clientId: 'ar'
+      }});
+  }
+
 }

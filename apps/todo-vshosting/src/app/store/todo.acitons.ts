@@ -16,3 +16,5 @@ export const createTodoItemSuccess = createAction(`${scope} Create todo item suc
 export const createTodoItemFailed = createAction(`${scope} Create todo item failed`, HttpMetaUtils.errorProps);
 
 export const filterTasks = createAction(`${scope} Filter tasks`, (taskFilter: {completedTasks: boolean, newTasks: boolean}) => taskFilter);
+
+export const markAllTodosAsCompleted = createAction(`${scope} Mark all todos as completed`);

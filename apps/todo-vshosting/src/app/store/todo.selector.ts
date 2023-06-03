@@ -4,11 +4,11 @@ import { TodoState } from "./todo.reducer";
 export const featureSelector = createFeatureSelector<TodoState>('todo');
 export const todoListSelector = createSelector(featureSelector, state => state?.todoList);
 export const todoCompletedTaskSelector = createSelector(todoListSelector, todoList => {
-  return todoList?.filter(task => !task.completed).length;
+  return todoList?.filter(task => task.completed).length;
 });
 
 export const todoNewTaskSelector = createSelector(todoListSelector, todoList => {
-    return todoList?.filter(task => task.completed).length;
+    return todoList?.filter(task => !task.completed).length;
 });
 
 export const filteredCompletedTaskSelector = createSelector(featureSelector, state => state.completedTasks);

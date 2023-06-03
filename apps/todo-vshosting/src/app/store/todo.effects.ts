@@ -31,6 +31,14 @@ export class TodoEffects {
     )
   )
 
+  markAllAsCompleted$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(actions.markAllTodosAsCompleted),
+      switchMap(() => this.todoService.markAllAsCompleted()),
+      catchError(({message, status}: HttpErrorResponse) => of(actions.createTodoItemFailed({error: { message, status }})))
+    ), {dispatch: false}
+  )
+
   constructor(private actions$: Actions,
               private todoService: TodoService) {}
 
