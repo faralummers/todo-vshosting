@@ -12,10 +12,10 @@ import { EffectsModule } from "@ngrx/effects";
 import { TodoEffects } from "./store/todo.effects";
 import { HttpClientModule } from "@angular/common/http";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
-
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [AppComponent],
-  imports: [AppRoutingModule, BrowserAnimationsModule, StoreModule.forRoot({
+  imports: [AppRoutingModule, MatSnackBarModule, BrowserAnimationsModule, StoreModule.forRoot({
     router: routerReducer,
     todo: TodoReducer
   }),

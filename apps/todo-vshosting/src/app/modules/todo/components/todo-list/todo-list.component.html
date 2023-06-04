@@ -1,3 +1,5 @@
-<mat-card class="card" [class.card-completed]="todoItem.completed">
-  <mat-card-content>{{todoItem.text}}</mat-card-content>
+<mat-card class="card" [class.card-completed]="itemTodoList.completed">
+   <input *ngIf="itemTodoList.id === itemTodoListId" class="edit-input" [formControl]="editedItem" matInput [value]="itemTodoList.text">
+  <mat-card-content *ngIf="itemTodoList.id !== itemTodoListId">{{itemTodoList.text}}</mat-card-content>
+  <app-todo-list-actions [itemTodoList]="itemTodoList" [itemTodoListId]="itemTodoListId" (deleteTodoItemEvent)="deleteTodoItem($event)" (approveEditTodoItemEvent)="approveEditTodoItem(editedItem.value)" (editTodoItemEvent)="editTodoItem($event)"></app-todo-list-actions>
 </mat-card>

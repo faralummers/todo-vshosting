@@ -5,7 +5,11 @@
     <div class="subcontainer-cards">
       <ng-container *ngFor="let todoItem of todoList$ | async">
         <app-todo-list
-          [todoItem]="todoItem"
+          [itemTodoListId]="itemTodoListId"
+          (editTodoItemEvent)="editTodoItem($event)"
+          (approveEditTodoItemEvent)="approveEditTodoItem($event)"
+          (deleteTodoItemEvent)="deleteTodoItem($event)"
+          [itemTodoList]="todoItem"
         ></app-todo-list>
       </ng-container>
     </div>

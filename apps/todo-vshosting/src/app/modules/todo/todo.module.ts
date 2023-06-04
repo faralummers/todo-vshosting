@@ -13,9 +13,10 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { TodoCounterComponent } from './components/todo-counter/todo-counter.component';
 import { MatBadgeModule } from "@angular/material/badge";
 import {MatIconModule} from '@angular/material/icon';
+import { TodoListActionsComponent } from './components/todo-list-actions/todo-list-actions.component';
 
 @NgModule({
-  declarations: [TodoComponent, TodoCreationComponent, TodoFiltersComponent, TodoListComponent, TodoCounterComponent],
+  declarations: [TodoComponent, TodoCreationComponent, TodoFiltersComponent, TodoListComponent, TodoCounterComponent, TodoListActionsComponent],
     imports: [CommonModule, MatIconModule, ReactiveFormsModule, TodoRouting, MatInputModule, MatButtonModule, MatCardModule, MatCheckboxModule, MatBadgeModule],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

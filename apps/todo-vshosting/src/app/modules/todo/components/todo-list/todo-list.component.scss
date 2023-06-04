@@ -1,7 +1,23 @@
 .card {
   margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+  padding: 20px;
 }
 .card-completed {
   box-shadow: 10px 5px 5px green;
   border: 2px solid green;
+}
+.mat-mdc-card-content {
+  width: 75%;
+}
+
+app-todo-list-actions {
+  width: 20%;
+}
+
+.edit-input {
+  width: 75%;
 }

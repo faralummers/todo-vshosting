@@ -1,0 +1,14 @@
+<div class="subcontainer-action-btn">
+  <button *ngIf="itemTodoList.id !== itemTodoListId" mat-fab extended color="primary" (click)="editTodoItem()">
+    <mat-icon>edit</mat-icon>
+    Upravit
+  </button>
+  <button *ngIf="itemTodoList.id === itemTodoListId"  mat-fab extended color="primary" (click)="approveEditTodoItem()">
+    <mat-icon>check</mat-icon>
+    Schválit
+  </button>
+  <button mat-fab extended color="warn" (click)="deleteTodoItem()">
+    <mat-icon>delete</mat-icon>
+    Smazat
+  </button>
+</div>
